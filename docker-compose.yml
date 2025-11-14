@@ -1,0 +1,12 @@
+services:
+  strava-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: strava-mcp
+    volumes:
+      # Mount .env file to /app/ directory
+      - ./.env:/app/.env
+    stdin_open: true
+    tty: true
+
